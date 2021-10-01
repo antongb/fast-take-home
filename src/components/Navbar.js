@@ -4,8 +4,11 @@ import styles from './navbar.module.css';
 import SearchField from './SearchField.js';
 
 
-const Navbar = ({ searchInput, setSearchInput }) => {
-
+const Navbar = ({
+  searchInput,
+  setSearchInput,
+  setMovieList,
+}) => {
 
   return (
     <nav className={styles.navbar}>
@@ -14,6 +17,7 @@ const Navbar = ({ searchInput, setSearchInput }) => {
         <SearchField
           searchInput={searchInput}
           setSearchInput={setSearchInput}
+          setMovieList={setMovieList}
         />
         <Link to='/playlist' className={styles.playList}>Playlist</Link>
       </div>

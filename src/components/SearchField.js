@@ -1,8 +1,13 @@
 import React from 'react';
+import { fetchMovies } from '../api/MovieAPI'
 import styles from './searchField.module.css';
 
 
-const SearchField = ({ searchInput, setSearchInput }) => {
+const SearchField = ({
+  searchInput,
+  setSearchInput,
+  setMovieList,
+}) => {
 
   const onInputChange = e => {
     setSearchInput(e.target.value);
@@ -11,7 +16,8 @@ const SearchField = ({ searchInput, setSearchInput }) => {
   const onSearchSubmit = e => {
     e.preventDefault();
     // make api call here
-    setSearchInput(''); // if I decide to clear it
+    fetchMovies(searchInput, setMovieList);
+    // setSearchInput(''); // if I decide to clear it
   }
 
   return (
