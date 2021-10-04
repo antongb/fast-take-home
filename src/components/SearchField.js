@@ -22,7 +22,7 @@ const SearchField = ({
 
   return (
     <div className={styles.container}>
-      <form onSubmit={onSearchSubmit}>
+      <form className={styles.form} onSubmit={onSearchSubmit}>
         <input
           className={styles.searchInput}
           placeholder={'Search...'}

@@ -13,6 +13,7 @@ import Playlist from './components/Playlist';
 function App() {
   const [searchInput, setSearchInput] = useState('');
   const [movieList, setMovieList] = useState([]);
+  const [playlist, setPlaylist] = useState([]);
 
   return (
     <Router>
@@ -24,9 +25,18 @@ function App() {
         />
         <Switch>
           <Route exact path='/'>
-            <Main movieList={movieList} />
+            <Main
+              movieList={movieList}
+              playlist={playlist}
+              setPlaylist={setPlaylist}
+            />
           </Route>
-          <Route path='/playlist' component={Playlist}/>
+          <Route path='/playlist'>
+            <Playlist
+              playlist={playlist}
+              setPlaylist={setPlaylist}
+            />
+          </Route>
         </Switch>
       </div>
     </Router>

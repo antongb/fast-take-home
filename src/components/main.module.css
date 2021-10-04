@@ -3,8 +3,38 @@
   flex-direction: column;
   flex: 1;
   overflow-y: scroll;
+  background-color: #eeeeee;
+  border-left: 2px solid #a5ffc9;
 }
 
 .movieList {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
+.movie {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em;
+}
+
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 100px;
+}
+
+.addButton {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+}
+
+.divider {
+  width: 25px;
 }
